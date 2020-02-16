@@ -2,12 +2,12 @@
 # First argument is the array, second is the value to search
 # If value is not found, returns 'Not Found'
 
-def binary_saerch arr, value
+def binary_search arr, value
   low = 0
   high = arr.length - 1
 
   while low <= high
-    mid = low + ((high - low)/2)
+    mid = (low + ((high - low)/2)).round
 
     if arr[mid] == value
       return mid
@@ -24,5 +24,5 @@ end
 
 # Test
 test_arr = [1,3,5,9,11,15,19,23,29];
-puts binary_saerch test_arr, 19
-puts binary_saerch test_arr, 10
+puts binary_search test_arr, 19
+puts binary_search test_arr, 10
