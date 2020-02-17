@@ -1,6 +1,7 @@
 // Finds the index of inputed value with binary search
 // First argument is the array, second is value to search
 // If value is not found, returns 'Not Found'
+// No input validations 
 
 function binarySearch(arr, value) {
   let low = 0;

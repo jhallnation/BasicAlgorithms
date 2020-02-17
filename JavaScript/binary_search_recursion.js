@@ -4,6 +4,7 @@
 // Third is the high index value
 // Last is the value to search
 // If value is not found, returns 'Not Found'
+// No input validations 
 
 function binarySearch(arr, low, high, value) {
 
@@ -12,11 +13,9 @@ function binarySearch(arr, low, high, value) {
     if (arr[mid] == value) {
       return mid;
     } else if (arr[mid] > value) {
-      high = mid - 1;
-      binarySearch(arr, low, high, value);
+      binarySearch(arr, low, mid - 1, value);
     } else {
-      low = mid + 1;
-      binarySearch(arr, low, high, value);
+      binarySearch(arr, mid + 1, high, value);
     }
   }
 
