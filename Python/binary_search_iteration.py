@@ -1,6 +1,7 @@
 # Finds the index of inputed value with binary search
 # First argument is the list, second is value to search
 # If value is not found, returns 'Not Found'
+# No input validations 
 
 def binary_search(list, value):
   low = 0

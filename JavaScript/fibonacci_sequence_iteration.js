@@ -3,10 +3,8 @@
 // No input validations 
 
 function fibonacciSequence(index) {
-  if (index == 0) {
-    return 0;
-  } else if (index == 1) {
-    return 1;
+  if (index == 0 || index == 1) {
+    return index;
   } else {
     let a = 0;
     let b = 1;

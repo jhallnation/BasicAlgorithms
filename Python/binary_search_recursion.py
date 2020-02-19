@@ -4,6 +4,7 @@
 # Third is the high index value
 # Last is the value to search
 # If value is not found, returns 'Not Found'
+# No input validations 
 
 def binary_search(list, low, high, value):
 
@@ -12,11 +13,9 @@ def binary_search(list, low, high, value):
     if list[mid] == value:
       return mid
     elif list[mid] > value:
-      high = mid - 1
-      return binary_search(list, low, high, value)
+      return binary_search(list, low, mid - 1, value)
     else:
-      low = mid + 1
-      return binary_search(list, low, high, value)
+      return binary_search(list, mid + 1, high, value)
   else:
     return "Not Found"
 

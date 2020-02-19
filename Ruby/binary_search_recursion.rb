@@ -4,6 +4,7 @@
 # Third is the high index value
 # Last is the value to search
 # If value is not found, returns 'Not Found'
+# No input validations 
 
 def binary_search arr, low, high, value
 
@@ -12,11 +13,9 @@ def binary_search arr, low, high, value
     if arr[mid] == value
       return mid
     elsif arr[mid] > value
-      high = mid - 1
-      binary_search arr, low, high, value
+      binary_search arr, low, mid - 1, value
     else
-      low = mid + 1
-      binary_search arr, low, high, value
+      binary_search arr, mid + 1, high, value
     end
   else  
     return "Not Found"
